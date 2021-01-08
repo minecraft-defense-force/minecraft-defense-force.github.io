@@ -1,0 +1,30 @@
+$mainColor: rgb(231, 248, 255);
+$headColor: rgb(255, 255, 255);
+$subColor: rgb(6, 59, 126);
+$accentColor: rgb(255, 47, 47);
+
+$twtColor:  rgb(225, 232, 237);
+
+$fontColor: rgb(29, 29, 29);
+$accentFontColor: rgb(255, 247, 247);
+
+$shadow: 0px 2px 5px rgba(0,0,0,0.26);
+$accentShadow: 0px 3px 6px rgba(0,0,0,0.35);
+$blowShadow: 0px 0px 10px rgba(0,0,0,0.35);
+
+$fontHead: sans-serif;
+$fontMain: 'Sawarabi Gothic','Noto Sans JP', sans-serif;
+
+/*Media query mixin*/
+$breakpoint-down: (
+  'sm': 'screen and (max-width: 420px)',
+  'md': 'screen and (max-width: 767px)',
+  'lg': 'screen and (max-width: 999px)',
+  'xl': 'screen and (max-width: 1199px)',
+	'xxl': 'screen and (max-width: 1600px)',
+) !default;
+@mixin mq($breakpoint: md) {
+  @media #{map-get($breakpoint-down, $breakpoint)} {
+    @content;
+  }
+}

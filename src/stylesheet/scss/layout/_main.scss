@@ -1,0 +1,33 @@
+.layout-main{
+    position: relative;
+    top: 48px;
+    width: 100%;
+    min-height: 100vh;
+    margin: 0px auto;
+    z-index: 0;
+    padding-bottom: 48px;
+    .main-head{
+        width: 100%;
+        height: 30vh;
+        position: relative;
+        &_title{
+            width: 100%;
+            font-size: 2.2em;
+            color: white;
+            text-align: center;
+            position: absolute;
+            line-height: 30vh;
+            text-shadow: 2px 2px 5px rgb(0,0,0);
+        }
+    }
+}
+
+#other{
+    background-color: rgb(108, 189, 255);
+    //background: url("/image/ikaduchi-mashu9.jpg") no-repeat center center;
+    //background-size: cover;
+}
+#asm{
+    background: url("/image/top2.jpg") no-repeat center center;
+    background-size: cover;
+}

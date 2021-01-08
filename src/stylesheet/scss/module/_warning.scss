@@ -1,0 +1,29 @@
+.warning{
+    position: absolute;
+    top: 48px;
+    text-align: center;
+    background-color: #7a8a99;
+    width: 100%;
+    padding: 0px 12px;
+    color: white;
+    display: none;
+    z-index: 1;
+    &_text{
+        font-size: 1.2em;
+        line-height: 48px;
+    }
+    @include mq(){
+        width: 100%;
+        &_text{
+            font-size: 1.0em;
+            line-height: 32px;
+        }
+    }
+    
+    
+}
+
+.show{
+    display: block;
+}
+

@@ -1,0 +1,8 @@
+# editors
+# intellij platform
+/.idea
+# Visual Studio Code
+/.vscode
+
+# destination dir
+/dist

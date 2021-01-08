@@ -1,0 +1,14 @@
+.news{
+    position: relative;
+    top: 8px;
+    width: 100%;
+    &-item{
+        position: relative;
+        display: block;
+        padding: 4px 0;
+        margin: 8px 0;
+        text-align: center;
+        text-decoration: none;
+        color: rgb(47, 47, 47);   
+    }
+}

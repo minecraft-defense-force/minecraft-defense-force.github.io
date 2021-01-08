@@ -1,0 +1,20 @@
+.normalBox{
+    width: 50%;
+    padding: 36px 16px;
+    margin: 0px auto;
+    @include mq(){
+        width: 96%;
+    }
+    p{
+        width: 80%;
+        margin: 12px auto;
+        @include mq(){
+            width: 100%;
+        }
+    }
+    img{
+        width: 85%;
+        display: block;
+        margin: 0px auto;
+    }
+}

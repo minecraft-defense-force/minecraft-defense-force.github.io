@@ -1,0 +1,56 @@
+.loading{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color:#004075;
+    z-index: 999;
+
+    .animation{
+        width: 128px;
+        height: 128px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    .radarline{
+        transform-origin: 64.5px 64.5px;
+        transform: rotate(0deg);
+        transition: transform 3s liner;
+        animation-timing-function: cubic-bezier(0.0, 0.0, 1.0, 1.0);
+        animation-name: animeRadar;
+        animation-duration: 3s;
+        animation-iteration-count: infinite;
+    }
+
+    .enemypoint{
+        opacity: 0;
+        animation-name: animeEnemy;
+        animation-duration: 3s;
+        animation-timing-function: liner;
+        animation-iteration-count: infinite;
+    }
+}
+
+@keyframes animeEnemy{
+    35%{
+        opacity: 0;
+    }
+    45%{
+        opacity: 1;
+    }
+    95%{
+        opacity: 0;
+    }
+}
+@keyframes animeRadar{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+

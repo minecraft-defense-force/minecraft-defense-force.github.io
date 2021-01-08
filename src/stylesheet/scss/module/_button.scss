@@ -1,0 +1,36 @@
+.button{
+    display: block;
+    width: 320px;
+    height: 48px;
+    line-height: 48px;
+    padding: 0 16px;
+    text-align: center;
+    text-decoration: none;
+    margin: 16px auto;
+    transition: all .3s;
+    @include mq(){
+        width: 240px;
+    }
+    &:hover{
+        width: 350px;
+        @include mq(){
+            width: 280px;
+        }
+            
+    }
+}
+.button--red{
+    @extend .button;
+    background-color: #fa8072;
+    color: white;
+}
+.button--blue{
+    @extend .button;
+    background-color: #72adfa;
+    color: white;
+}
+.button--white{
+    @extend .button;
+    background-color: #f0ffff;
+    color: black;
+}

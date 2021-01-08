@@ -1,0 +1,17 @@
+.icon{
+    display: inline-block;
+    padding: 2px 8px;
+    margin: 0px 4px;
+}
+
+.icon--blue{
+    @extend .icon;
+    background-color: #1e90ff;
+    color: white;
+}
+
+.icon--red{
+    @extend .icon;
+    background-color: #ff401e;
+    color: white;
+}
