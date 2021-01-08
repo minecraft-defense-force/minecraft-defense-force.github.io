@@ -14,7 +14,7 @@ $(window).on('load', function () {
 		$("#browser").toggleClass("show");
 	}
 
-	$('.loading').delay(400).fadeOut(300);
+	$('.loading').delay(1200).fadeOut(300);
 });
 
 

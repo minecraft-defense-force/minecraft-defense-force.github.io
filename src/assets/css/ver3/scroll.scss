@@ -1,0 +1,60 @@
+#scroll{
+	position: absolute;
+	bottom: 5%;
+	left: 0;
+	right: 0;
+	margin: 0px auto;
+	width: 100px;
+	height: 100px;
+	border-radius: 50%;
+	background-color: white;
+	color: $subColor;
+	box-shadow: $shadow;
+	cursor: pointer;
+	z-index: 1;
+	transition: background-color 0.3s, color 0.3s;
+	span{
+		width: 100%;
+		font-size: 2.5em;
+		line-height: 100px;
+		display: inline-block;
+		text-align: center;
+
+	}
+	&:hover{
+		background-color: $subColor;
+		color: white;
+	}
+	@include mq(xxl){
+		display: none;
+	}
+}
+#retop{
+	position: relative;
+	left: 0;
+	right: 0;
+	margin: 20px auto;
+	width: 100px;
+	height: 100px;
+	border-radius: 50%;
+	background-color: white;
+	color: $subColor;
+	box-shadow: $accentShadow;
+	cursor: pointer;
+	z-index: 1;
+	transition: background-color 0.3s, color 0.3s;
+	span{
+		width: 100%;
+		font-size: 2.5em;
+		line-height: 100px;
+		display: inline-block;
+		text-align: center;
+
+	}
+	&:hover{
+		background-color: $subColor;
+		color: white;
+	}
+	@include mq(){
+	}
+}

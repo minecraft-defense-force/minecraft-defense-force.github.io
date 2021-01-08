@@ -1,0 +1,35 @@
+.historyBox{
+	margin: 0px auto;
+	width: 80%;
+	max-width: 600px;
+	height: 200px;
+	position: relative;
+	&:nth-child(odd){
+		.historyBox__caption{
+			width: calc(100% - 200px);
+			text-align: left;
+			font-size: 1.5em;
+			position: absolute;
+			left: 230px;
+			top: 0;
+		}
+		.historyBox__img{
+			width: 220px;
+			display: inline-block;
+		}
+		.historyBox__article{
+			width: calc(100% - 220px);
+			background-color: gray;
+			display: inline-block;
+		}
+	}
+	&:nth-child(even){
+		.historyBox__caption{
+			text-align: right;
+			font-size: 1.5em;
+		}
+		.historyBox__img{
+
+		}
+	}
+}

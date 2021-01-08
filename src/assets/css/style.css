@@ -1,0 +1,247 @@
+/*
+
+create by yugo. 2018/10/3 23:01
+copyright Japanese-MCDF.
+
+*/
+body, h1, h2, h3, h4, h5, h6, ul, ol, li {
+  font-family: 'Noto Sans JP', sans-serif;
+  margin: 0;
+  padding: 0;
+  color: #303030; }
+
+.Oleo {
+  font-family: 'Oleo script';
+  font-size: 3em !important; }
+
+#wapper {
+  width: 100vw; }
+
+header {
+  width: 100%;
+  height: 48px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  background-color: white;
+  -webkit-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.26);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.26); }
+  header h1 {
+    margin: 0;
+    padding: 0; }
+  header a {
+    text-decoration: none;
+    color: #3c3c3c; }
+  header #header-title {
+    position: relative;
+    font-size: 17px;
+    width: 100%;
+    text-align: center;
+    line-height: 48px;
+    -webkit-transition: left 0.3s;
+    -o-transition: left 0.3s;
+    transition: left 0.3s; }
+    @media screen and (max-width: 767px) {
+      header #header-title {
+        font-size: 18px; } }
+    @media screen and (max-width: 460px) {
+      header #header-title {
+        font-size: 14px; } }
+    header #header-title::before {
+      position: relative;
+      top: 8px;
+      display: inline-block;
+      width: 32px;
+      height: 32px;
+      content: "";
+      background-image: url("../images/logo.png");
+      background-repeat: no-repeat; }
+
+nav {
+  position: fixed;
+  top: 48px;
+  left: -300px;
+  width: 300px;
+  height: 100vh;
+  -webkit-transition: left 0.3s;
+  -o-transition: left 0.3s;
+  transition: left 0.3s;
+  background: #205696;
+  z-index: 2; }
+  @media screen and (max-width: 767px) {
+    nav {
+      overflow-y: scroll; } }
+  @media screen and (max-width: 460px) {
+    nav {
+      width: 240px; } }
+  nav a {
+    font-size: 18px;
+    color: white;
+    text-decoration: none; }
+  nav .navicon {
+    position: relative;
+    top: 4px;
+    right: 3px;
+    font-size: 18px !important; }
+  nav ul {
+    list-style-type: none;
+    width: 100%; }
+    @media screen and (max-width: 767px) {
+      nav ul {
+        padding-bottom: 100px; } }
+    nav ul li {
+      position: relative;
+      display: block;
+      width: 100%;
+      min-height: 38px; }
+      nav ul li .parent {
+        display: block;
+        padding-left: 20px;
+        line-height: 38px;
+        font-size: 18px;
+        color: white;
+        border-bottom: 1px solid #133d70;
+        cursor: pointer; }
+        nav ul li .parent:hover {
+          background-color: #133d70; }
+      nav ul li .accordion:after {
+        content: "";
+        position: absolute;
+        top: 12px;
+        right: 30px;
+        padding: 0;
+        display: block;
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 14px 7px 0px 7px;
+        border-color: white transparent transparent transparent; }
+    nav ul ol {
+      width: 100%;
+      list-style-type: none; }
+      nav ul ol li {
+        width: 100%;
+        min-height: 32px !important;
+        -webkit-transition: background-color 0.3s;
+        -o-transition: background-color 0.3s;
+        transition: background-color 0.3s; }
+        nav ul ol li:last-child {
+          border-bottom: 1px solid #133d70; }
+        nav ul ol li a {
+          display: block;
+          padding-left: 40px;
+          line-height: 32px;
+          text-decoration: none;
+          opacity: 0.85; }
+        nav ul ol li:hover {
+          background-color: #133d70; }
+
+.slide {
+  left: 300px; }
+  @media screen and (max-width: 460px) {
+    .slide {
+      left: 240px; } }
+
+#wapper {
+  width: 100%;
+  overflow: hidden; }
+
+main {
+  position: relative;
+  top: 48px;
+  left: 0;
+  width: 100%;
+  -webkit-transition: left 0.3s;
+  -o-transition: left 0.3s;
+  transition: left 0.3s;
+  z-index: 0;
+  padding-bottom: 100px; }
+  main #contents {
+    margin: 0px auto;
+    width: 100%;
+    max-width: 900px; }
+    main #contents h1 {
+      text-align: center;
+      margin: 20px 0; }
+      @media screen and (max-width: 767px) {
+        main #contents h1 {
+          font-size: 16px; } }
+
+footer {
+  position: relative;
+  bottom: -50px;
+  left: 0;
+  margin-top: 100px;
+  width: 100vw;
+  height: 260px;
+  background-color: #0a1930;
+  color: white;
+  overflow-x: hidden;
+  -webkit-transition: left 0.3s;
+  -o-transition: left 0.3s;
+  transition: left 0.3s; }
+  @media screen and (max-width: 767px) {
+    footer {
+      height: 400px; } }
+  @media screen and (max-width: 460px) {
+    footer {
+      height: 650px; } }
+  footer #footer-nav {
+    position: relative;
+    top: 10px; }
+    footer #footer-nav ul {
+      width: 60%;
+      margin: 0px auto; }
+      @media screen and (max-width: 1199px) {
+        footer #footer-nav ul {
+          width: 90%; } }
+      @media screen and (max-width: 460px) {
+        footer #footer-nav ul {
+          width: 90%; } }
+      footer #footer-nav ul li {
+        width: calc((100% - (15px * 8)) / 4);
+        margin: 10px 15px;
+        float: left;
+        list-style: none; }
+        @media screen and (max-width: 767px) {
+          footer #footer-nav ul li {
+            width: calc((100% - (15px * 4)) / 2); } }
+        @media screen and (max-width: 460px) {
+          footer #footer-nav ul li {
+            width: 90%;
+            text-align: center; } }
+        footer #footer-nav ul li h2 {
+          font-size: 16px;
+          padding-left: 2px;
+          padding: 0 !important;
+          margin: 20px;
+          color: white;
+          border-bottom: 1px solid gray; }
+        footer #footer-nav ul li a {
+          position: relative;
+          display: block;
+          width: calc(100%-12px);
+          font-size: 14px;
+          padding: 1px 6px;
+          text-decoration: none;
+          color: #cfcfcf;
+          -webkit-transition: color 0.2s, background-color 0.2s;
+          -o-transition: color 0.2s, background-color 0.2s;
+          transition: color 0.2s, background-color 0.2s; }
+        footer #footer-nav ul li a:hover {
+          background-color: #cfcfcf;
+          color: #0a1930; }
+  footer .Copyright {
+    clear: both;
+    display: block;
+    position: relative;
+    top: 15px;
+    text-align: center;
+    font-size: 16px; }
+    footer .Copyright a {
+      color: white; }
+    @media screen and (max-width: 460px) {
+      footer .Copyright {
+        font-size: 12px;
+        top: 60px; } }

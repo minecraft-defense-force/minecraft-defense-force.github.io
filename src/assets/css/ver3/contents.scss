@@ -1,0 +1,517 @@
+
+
+
+#contents{
+	z-index: 0;
+	width: 100%;
+	position: relative;
+	left: 0;
+	right: 0;
+	margin: 0px auto;
+	border-radius: 5px;
+	font-size: 1.1em;
+	min-height: 700px;
+	@include mq(){
+		top: 0;
+		width: 100%;
+		font-size: 0.9em;
+	}
+	h1{
+		font-size: 1.5em;
+
+	}
+	h2{
+		font-size: 1.5em;
+	}
+.simpleBox{
+
+	p{
+		width: 100%;
+		margin: 14px auto 14px auto;
+		opacity: 0.92;
+		line-height: 1.7em;
+		font-size: 1.0em;
+		@include mq(lg){
+			width: 90%;
+		}
+		@include mq(){
+			font-size: 0.9em;
+		}
+	}
+	ul{
+		width:100%;
+		margin: 20px auto;
+		@include mq(){
+			margin: 0;
+		}
+		li{
+			box-sizing: border-box;
+			padding: 5px 0px 5px 26px;
+			width: 100%;
+		}
+	}
+	.towt{
+		width: 80%;
+		margin: 0px auto;
+		th, td{
+			padding: 5px;
+			border-bottom: 1px solid rgb(195, 195, 195);
+		}
+		th{
+			width: 50%;
+			text-align: center;
+		}
+		td{
+			width: 50%;
+			text-align: center;
+		}
+	}
+	.grapt{
+		width: 100%;
+		margin: 0px auto;
+		tr{
+			width: 100%;
+		}
+		th, td{
+			padding: 5px;
+
+		}
+		th{
+			text-align: center;
+			border-bottom: 1px solid rgb(130, 130, 130);
+		}
+		td{
+			padding-left: 12px;
+			text-align: center;
+			border-bottom: 1px solid rgb(195, 195, 195);
+			text-align: left;
+		}
+	}
+}
+}
+.area{
+	font-size: 0;
+	width: 100%;
+}
+.article-area{
+	clear: both;
+	width: 60%;
+	max-width: 650px;
+	background-color: white;
+	padding: 20px 20px;
+	margin: 10px auto;
+	@include mq(){
+		width: 100%;
+		padding: 20px 0px;
+	}
+	h1{
+		width: 95%;
+		max-width: 600px;
+		border-bottom: 5px solid rgb(36, 114, 233);
+		margin: 30px auto;
+		padding: 0px 0px;
+		text-align: center;
+		font-size: 1.5em;
+		@include mq(){
+			border-bottom: 3px solid rgb(36, 114, 233);
+			font-size: 1.25em;
+			padding: 15px 0px;
+		}
+	}
+	h2{
+		position: relative;
+		top: 10px;
+		width: 100%;
+		margin: 0px auto;
+		padding: 10px 0px;
+		text-align: center;
+		font-size: 1.5em;
+		@include mq(){
+			font-size: 1.20em;
+		}
+	}
+	h3{
+		box-sizing: border-box;
+		width: 100%;
+		@include mq(){
+			padding-left: 8px;
+		}
+	}
+	p{
+		width: 100%;
+		margin: 14px auto 14px auto;
+		opacity: 0.92;
+		line-height: 1.7em;
+		font-size: 1.0em;
+		@include mq(lg){
+			width: 90%;
+		}
+		@include mq(){
+			font-size: 0.9em;
+		}
+	}
+	ul{
+		width:100%;
+		margin: 20px auto;
+		@include mq(){
+			margin: 0;
+		}
+		li{
+			box-sizing: border-box;
+			padding: 5px 0px 5px 26px;
+			width: 100%;
+		}
+	}
+	.towt{
+		width: 80%;
+		margin: 0px auto;
+		th, td{
+			padding: 5px;
+			border-bottom: 1px solid rgb(195, 195, 195);
+		}
+		th{
+			width: 50%;
+			text-align: center;
+		}
+		td{
+			width: 50%;
+			text-align: center;
+		}
+	}
+	.grapt{
+		width: 100%;
+		margin: 0px auto;
+		tr{
+			width: 100%;
+		}
+		th, td{
+			padding: 5px;
+
+		}
+		th{
+			text-align: center;
+			border-bottom: 1px solid rgb(130, 130, 130);
+		}
+		td{
+			padding-left: 12px;
+			text-align: center;
+			border-bottom: 1px solid rgb(195, 195, 195);
+			text-align: left;
+		}
+	}
+}
+.image-area{
+	font-size: 1rem;
+	position: relative;
+	width: calc((100% - 5px) / 2);
+	color: white;
+	display: inline-block;
+	height: 500px;
+	@include mq(lg){
+		width: 100%;
+		height: 500px;
+	}
+	@include mq(){
+		width: 100%;
+		height: 300px;
+	}
+	img{
+
+	}
+	.image-area-inner{
+		font-size: 1.1em;
+		position: absolute;
+		top: 0px;
+		left: 0px;
+		width: 100%;
+		height: 100%;
+		background-color: rgba(0, 115, 222, 0.65);
+		transition: background-color 0.3s;
+		@include mq(){
+			font-size: 0.9em;
+		}
+		h1{
+			border: none !important;
+		}
+		p{
+			width: 60% !important;
+			@include mq(){
+			width: 80% !important;
+			}
+		}
+		&:hover{
+			background-color: rgba(0, 115, 222, 0.2);
+		}
+	}
+}
+
+.column-area{
+	width: 100%;
+	font-size: 1rem;
+	position: relative;
+	img{
+		display: inline-block;
+		width: calc(40% - 5px);
+	}
+	.column-area-article{
+		display: inline-block;
+		width: 60%;
+
+		h1, p{
+			width: 75% !important;
+		}
+	}
+}
+
+.multibox-area{
+	width: 80%;
+	margin: 0px auto;
+	@include mq(){
+		width: 100%;
+	}
+}
+.img-full{
+	display: block;
+	width: 100%;
+	height: 100%;
+}
+.img-auto{
+	display: block;
+	margin: 0px auto;
+	width: 100%;
+	max-width: 655px;
+}
+.overlay{
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+}
+
+/*credit only?*/
+.cardLayout{
+	font-size: 0;
+  width: 100%;
+	margin: 0px auto;
+	max-width: 950px;
+  @include mq(){
+    width: 90%;
+    margin: 0px auto;
+  }
+  .card{
+		position: relative;
+		font-size: 1rem;
+    width: calc((100% - (12px * 6)) / 3);
+    height: 110px;
+    margin: 12px 10px;
+		display: inline-block;
+    border-radius: 5px;
+    background-color: rgb(27, 119, 196);
+		color: white;
+    @include mq(lg){
+      width: calc((100% - (10px * 4)) / 2);
+      margin: 10px 10px;
+    }
+		&.gold{
+			&:after{
+				position: absolute;
+				top: 0;
+				left: 0;
+				right: 0;
+				bottom: 0;
+				margin: auto auto;
+				width: 96%;
+				height: 100px;
+				content: "";
+				border-radius: 4px;
+				border: 2px solid rgb(255, 215, 71);
+			}
+		}
+
+    .title{
+			font-size: 1.2em;
+			display: block;
+			width: 86%!important;
+			height: 32px;
+			margin: 10px auto !important;
+			padding: 5px 0;
+      font-size: 1.2em;
+      text-align: center;
+      @include mq(){
+        font-size: 0.75em;
+      }
+			&.gold{
+				color: rgb(254, 203, 52);
+				border-bottom: 1px solid rgb(255, 215, 71);
+				font-weight: bold;
+				letter-spacing: 0.05em;
+			}
+			&.brd{
+				border-bottom: 1px solid rgb(255, 215, 71);
+			}
+    }
+    p{
+
+			font-size: 0.94em;
+      display: inline-block;
+			width: 100% !important;
+			position: absolute;
+      text-align: center;
+			color: white;
+			line-height: 1em !important;
+			margin: 0 !important;
+			padding: 0 !important;
+    }
+  }
+}
+
+.icon{
+	padding: 3px 5px;
+	margin: 0px 4px;
+	font-size: 0.8em;
+	line-height: 1em;
+	padding: 3px 5px;
+	border-radius: 3px;
+	background-color: $accentColor;
+	color: $accentFontColor;
+}
+.button{
+	display: block;
+	min-width: 200px;
+	width: 70%;
+	max-width: 450px;
+	text-align: center;
+	background-color: $subColor;
+	padding: 10px 0px;
+	margin: 10px auto;
+	color: $accentFontColor;
+	text-decoration: none;
+	box-shadow: $shadow;
+	transition: background-color 0.3s, color 0.3s, padding 0.3s;
+	&:hover{
+		background-color: $accentFontColor;
+		color: $subColor;
+		padding: 10px 5px;
+	}
+}
+.button-large{
+	display: block;
+	width: 95%;
+	min-width: 200px;
+	text-align: center;
+	background-color: $subColor;
+	padding: 20px 0px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	color: $accentFontColor;
+	text-decoration: none;
+	box-shadow: $shadow;
+	transition: background-color 0.3s, color 0.3s, padding 0.3s;
+	&:hover{
+		background-color: $accentFontColor;
+		color: $subColor;
+		padding: 20px 5px;
+	}
+}
+.simple-list{
+	list-style-type: none;
+	li{
+
+	}
+	li::before {
+	  position: relative;
+	  top: -2px;
+		left: -10px;
+	  display: inline-block;
+
+	  width: 7px;
+	  height: 7px;
+  content: '';
+
+  border-radius: 100%;
+  background: rgb(5, 24, 24);
+}
+	li:first-child{
+	}
+}
+
+.graphical-list{
+	list-style-type: none;
+	li{
+	}
+	li::before {
+	  position: relative;
+	  top: -2px;
+		left: -6px;
+	  display: inline-block;
+
+	  width: 7px;
+	  height: 7px;
+  content: '';
+
+  border-radius: 100%;
+  background: rgb(5, 24, 24);
+}
+	li:first-child{
+		border-top: 1px solid gray;
+	}
+	li:nth-child(odd){
+		background: rgb(226, 226, 226);
+	}
+}
+.inner-yt{
+	display: block;
+	margin: 10px auto;
+	width:100%;
+	height: 400px;
+	@include mq(){
+		width: 96%;
+		height: 300px;
+	}
+}
+.shadow{
+	box-shadow: $shadow;
+}
+.rounded-normal{
+	border-radius: 3px;
+}
+.rounded-hard{
+	border-radius: 5px;
+}
+/*COLOR-VALUE*/
+.color-red{
+	color: red;
+}
+.color-blue{
+	color: blue;
+}
+.color-green{
+	color: green;
+}
+.color-yellow{
+	color: yellow;
+}
+.center{
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+}
+.line-bottom{
+	border-bottom: 1px solid gray;
+}
+.line-top{
+	border-top: 1px solid gray;
+}
+
+#editor{
+	width: 100%;
+	height: 500px;
+}
+/*FONT*/
+.mincho{
+	font-family: "游明朝", YuMincho, "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN", "HG明朝E", "ＭＳ Ｐ明朝", "ＭＳ 明朝", serif;
+}
+
+.center{
+	text-align: center;
+}

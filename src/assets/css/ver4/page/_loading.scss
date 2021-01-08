@@ -1,0 +1,27 @@
+.loading {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    top: 0px;
+    left: 0px;
+    background: rgb(32, 46, 56);
+    z-index: 9999;
+    .animation {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+
+        transform: translate(-50%, -50%);
+        color: #fff;
+        font-size: $fontSize-Mid;
+        animation: loadinganimation 1500ms ease-out forwards infinite;
+    }
+    @keyframes loadinganimation {
+        from,to {
+            opacity: 0;
+        }
+        50% {
+            opacity: .5;
+        }
+    }      
+}

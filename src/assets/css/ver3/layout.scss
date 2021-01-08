@@ -1,0 +1,253 @@
+
+/*Create by yugo.*/
+/*Minecraft Defense Force*/
+
+$mainColor: rgb(231, 248, 255);
+$headColor: rgb(255, 255, 255);
+$subColor: rgb(6, 59, 126);
+$accentColor: rgb(255, 47, 47);
+
+$twtColor:  rgb(225, 232, 237);
+
+$fontColor: rgb(29, 29, 29);
+$accentFontColor: rgb(255, 247, 247);
+
+$shadow: 0px 2px 5px rgba(0,0,0,0.26);
+$accentShadow: 0px 3px 6px rgba(0,0,0,0.35);
+$blowShadow: 0px 0px 10px rgba(0,0,0,0.35);
+
+$fontHead: sans-serif;
+$fontMain: 'Sawarabi Gothic','Noto Sans JP', sans-serif;
+
+/*Media query mixin*/
+$breakpoint-down: (
+  'sm': 'screen and (max-width: 420px)',
+  'md': 'screen and (max-width: 767px)',
+  'lg': 'screen and (max-width: 999px)',
+  'xl': 'screen and (max-width: 1199px)',
+	'xxl': 'screen and (max-width: 1600px)',
+) !default;
+@mixin mq($breakpoint: md) {
+  @media #{map-get($breakpoint-down, $breakpoint)} {
+    @content;
+  }
+}
+
+
+@import "nav.scss";
+@import "contents.scss";
+@import "scroll.scss";
+@import "flexBox.scss";
+@import "historyBox.scss";
+
+*{
+	box-sizing: border-box;
+}
+
+body, h1, h2, h3, h4, h5, h6, ul, ol, li, p{
+	margin: 0;
+	padding: 0;
+}
+
+.loading{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color:#003743;
+    z-index: 999;
+
+    .animation{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    .radarline{
+        transform-origin: 48.5px 48.5px;
+        transform: rotate(0deg);
+        transition: transform 3s liner;
+        animation-timing-function: cubic-bezier(0.0, 0.0, 1.0, 1.0);
+        animation-name: animeRadar;
+        animation-duration: 3s;
+        animation-iteration-count: infinite;
+    }
+
+    .enemypoint{
+        opacity: 0;
+        animation-name: animeEnemy;
+        animation-duration: 3s;
+        animation-timing-function: liner;
+        animation-iteration-count: infinite;
+	}
+	.errortx{
+		width: 90%;
+		margin: 0px auto;
+		position: absolute;
+		bottom: 20%;
+		text-align: center;
+		opacity: 1;
+        animation-name: errortx;
+        animation-duration: 3s;
+        animation-timing-function: liner;
+		animation-iteration-count: 1;
+		color: white;
+	}
+}
+
+@keyframes animeEnemy{
+    35%{
+        opacity: 0;
+    }
+    45%{
+        opacity: 1;
+    }
+    95%{
+        opacity: 0;
+    }
+}
+@keyframes animeRadar{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+@keyframes errortx{
+	60%{
+		opacity: 0;
+	}
+	100%{
+		opacity: 1;
+	}
+}
+
+
+
+#wapper{
+	width: 100%;
+	@include mq(){
+		width: 100%;
+	}
+}
+
+#header{
+	width: 100%;
+	height: 100%;
+	font-family: $fontHead;
+	z-index: 1;
+}
+#header-inner{
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 48px;
+	background-color: $headColor;
+	box-shadow: $shadow;
+	z-index: 2;
+	#site-title{
+		text-align: center;
+		font-size: 1.5em;
+		line-height: 48px;
+		a{
+			color: $fontColor;
+			text-decoration: none;
+		}
+		@include mq(){
+			font-size: 1.2em;
+		}
+	}
+	.social{
+		position: fixed;
+		right: 20px;
+		top: 6px;
+		width: 82px;
+		height: 36px;
+		background-color: $subColor;
+		color: white;
+		text-decoration: none;
+		text-align: center;
+		line-height: 36px;
+		@include mq(sm){
+			display: none;
+		}
+	}
+}
+#header-image{
+	position: relative;
+	top: 48px;
+	width: 100%;
+	height: 100%;
+}
+
+#info{
+	display: block;
+	text-align: center;
+	position: relative;
+	top: 0;
+	left: 0;
+	right: 0;
+	margin: 0px auto;
+	padding: 10px 0px;
+	z-index: 1;
+	font-size: 0.9em;
+	line-height: 2.2em;
+	background-color: rgb(36, 66, 110);
+	a{
+		text-decoration: none;
+		color: white;
+		display: block;
+		transition: background-color 0.2s, color 0.2s;
+		&:hover{
+			background-color: rgb(255, 255, 255);
+			color: rgb(36, 66, 110);
+		}
+	}
+	@include mq(){
+		font-size: 0.75em;
+	}
+}
+
+#main{
+	z-index: 0;
+	position: relative;
+	width: 100%;
+	top: 40px;
+	padding-bottom: 64px;
+	font-family: $fontMain;
+	background: white;
+  background-size: cover;
+}
+
+#footer{
+	position: relative;
+	width: 100%;
+	height: 240px;
+	background-color: rgb(8, 20, 38);
+	@include mq(md){
+		height: 380px;
+	}
+	@include mq(sm){
+		height: 600px;
+	}
+}
+.Copyright{
+	clear: both;
+	display: block;
+	position: relative;
+	top: 30px;
+	text-align: center;
+	font-size: 16px;
+	color: white;
+	a{
+		color: white;
+	}
+
+	@include mq(sm){
+		font-size: 12px;
+		top: 60px;
+	}
+}
