@@ -6,3 +6,6 @@
 
 # destination dir
 /dist
+
+# node and npm
+node_modules
