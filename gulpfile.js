@@ -7,6 +7,7 @@ const staticResourcesGlob = [
     "src/**/*.js",
     "src/**/*.jpg",
     "src/**/*.png",
+    "src/**/*.webp",
 ]
 
 // Compile sass into CSS & auto-inject into browsers
