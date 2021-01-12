@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="shortcut-icon" href="/image/boueibu_icon.png">
+	<link rel="stylesheet" href="stylesheet/css/app.css">
+	<link href="https://fonts.googleapis.com/css?family=Sawarabi+Gothic" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<title>マインクラフト防衛部</title>
+</head>
+
+<body>
+	<div class="loading">
+		<svg class="animation" width="128" height="128" viewBox="0 0 128 128" fill="none"
+			xmlns="http://www.w3.org/2000/svg">
+			<circle cx="64.5" cy="64.5" r="60" fill="#004075" />
+			<circle cx="64.5" cy="64.5" r="1" stroke="#40FFD1" />
+			<circle cx="64.5" cy="64.5" r="60" stroke="#40FFD1" />
+			<circle class="enemypoint" cx="89.5" cy="83.5" r="3.5" fill="#01FF94" />
+			<g class="radarline">
+				<line x1="64.5" y1="1" x2="64.5" y2="64.5" stroke="#40FFD1" />
+
+			</g>
+		</svg>
+	</div>
+	<div class="layout">
+		<header class="layout-header">
+			<div id="navbutton">
+				<div class="trigger">
+					<span></span><span></span><span></span>
+				</div>
+				<span class="menutitle">メニュー</span>
+			</div>
+			<a href="/index.html" target="" class="layout-header_title">マインクラフト防衛部</a>
+			<a href="https://twitter.com/mcboueibu" target="_blank" class="layout-header_twitter">Twitter</a>
+		</header>
+		<nav class="layout-nav">
+			<!--INCLUDE for JS-->
+		</nav>
+		<div class="warning" id="browser">
+			<span class="warning_text">
+				(´・ω・｀)ご利用のブラウザでは正しく表示されない可能性があります。
+			</span>
+		</div>
+		<main class="layout-landing">
+			<div class="layout-landing_img">
+				<div class="visual">
+					<span class="visual_caption">
+						Minecraft Defence Force.
+					</span>
+				</div>
+			</div>
+			<div class=""></div>
+			<div class="landing-infomation">
+				<a class="landing-infomation_scroll scroll" href="#news">
+					<i class="material-icons">
+						keyboard_arrow_down
+					</i>
+				</a>
+				<div class="news" id="news">
+					<a href="/credit.html" class="news-item">
+						<span class="icon--red">BEDA</span>クレジットを更新しました！
+					</a>
+					<a href="/beda.html" class="news-item">
+						<span class="icon--red">BEDA</span>BEDA-IVが終了しました！
+					</a>
+				</div>
+			</div>
+			<div class="container" id="container">
+				<article class="normalBox">
+					<section>
+						<h1>マインクラフト防衛部<br>ホームページへようこそ！</h1>
+						<p>
+							マインクラフト防衛部とは、 世界的に有名なMinecraft(マインクラフト)というゲームで、
+							最強の艦隊防空システムや全方位対応のTNTキャノンを開発することを主目標とした技術者集団です。
+						</p>
+					</section>
+				</article>
+				<article class="sliceBox" id="asm">
+					<section>
+						<h2 class="sliceBox_head">Aegis System Mod</h2>
+						<p class="sliceBox_text">
+							世界最強の対空防衛システム「イージスシステム」をマインクラフトの世界で開発、運用しています。<br>
+							2019年8月14日、長い年月と途方も無い努力の末、ついに完成宣言がなされました。
+						</p>
+						<a href="/project/asm.html" class="sliceBox_link">詳しく見る</a>
+					</section>
+				</article>
+				<article class="sliceBox" id="canon">
+					<section>
+						<h2 class="sliceBox_head">TNTキャノン</h2>
+						<p class="sliceBox_text">
+							全方位(360度)対応タイプや耐水弾加工が可能なタイプなど、最高レベルのTNTキャノンを開発しています。<br>
+							また、バージョンアップにも強く、少量の変更のみで次のバージョンへ持ち込むことが可能です。
+						</p>
+						<a href="/project/cannon.html" class="sliceBox_link">詳しく見る</a>
+					</section>
+				</article>
+				<article class="sliceBox" id="rs">
+					<section>
+						<h2 class="sliceBox_head">レッドストーン回路</h2>
+						<p class="sliceBox_text">
+							クラフターの生活をより豊かにするべく、防衛部では便利な回路たちを開発しています。<br>
+							日常的に使える平面交差回路や、実際に遊べるマインスイーパーなど、開発してきた回路は多岐に渡ります。
+						</p>
+						<a href="/project/redstone.html" class="sliceBox_link">詳しく見る</a>
+					</section>
+				</article>
+			</div>
+		</main>
+		<footer class="layout-footer">
+			<!--Include for JS-->
+		</footer>
+	</div>
+	<script src="/script/lib/jquery-3.2.1.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.2.0/ace.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.2.0/ext-language_tools.js"></script>
+	<script src="/script/main.js"></script>
+</body>
+
+</html>

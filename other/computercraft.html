@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="ja" dir="ltr">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="shortcut icon" href="/boueibu_icon.png">
+		<meta name="viewport" content="width=device-width" />
+		<link href="/assets/css/ver3/layout.css" rel="stylesheet" />
+		<link href="/assets/css/heiglights/styles/default.css" />
+		<link href="https://fonts.googleapis.com/css?family=Sawarabi+Gothic" rel="stylesheet">
+	  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+		<title>NEWS</title>
+	</head>
+	<body>
+		<div id="wapper">
+			<header>
+				<div id="header">
+					<div id="navbutton">
+		        <a class="trigger" href="javascript:void(0);">
+		          <span></span><span></span><span></span>
+		        </a>
+		        <a class="menutitle">メニュー</a>
+		      </div>
+					<div id="header-inner">
+						<h1 id="site-title">
+							<a href="">マインクラフト防衛部</a>
+						</h1>
+					</div>
+				</div>
+			</header>
+			<nav>
+				<div id="side-nav">
+					<!--Auto Insert-->
+				</div>
+			</nav>
+			<main>
+				<div id="main">
+					<div id="contents">
+						<div class="article-area">
+							<h1>Computer Craft</h1>
+							<p>
+								ComputerCraftとは、マインクラフトの中でタートル(ロボット)等を使ってLua言語でプログラミングができるModです。<br />
+								学校の授業で取り入れられる等、色々な所で注目されています。
+							</p>
+							<a href="https://minecraft.curseforge.com/projects/computercraft" target="_blank" class="button">ComputerCraft</a>
+							<h2>迎撃プログラム</h2>
+							<p>
+								以前防衛部が運用していた、対ICBMMod用の迎撃プログラムです。
+								行番号をクリックすると、その行を全体を選択することができます。<br />
+								実際に使用するには、ICBMModとComputerCraftを導入する必要があります。ご注意ください。
+							</p>
+							<span class="icon">Mod:ComputerCraft, ICBMMod</span>
+							<span class="icon">言語：Lua</span>
+
+							<pre id="editor">
+print("Please, input a point that the target was fired.")
+print("X?")
+a = tonumber(read())
+print("Y?")
+Fh1 = tonumber(read())
+print("Z?")
+p = tonumber(read())
+print("")
+
+print("Please, input a point where the target aims.")
+print("X?")
+b = tonumber(read())
+print("Z?")
+q = tonumber(read())
+print("")
+
+print("Please, input a point of here (or interception starting).")
+print("X?")
+c = tonumber(read())
+print("Y?")
+Fh2 = tonumber(read())
+print("Z?")
+r = tonumber(read())
+print("")
+
+A = a+b; B = a-b; P = p+q; Q = p-q
+E = (B*B + Q*Q) ^ 0.5
+F = a*q - b*p
+
+for t = 0, E/10, 2 do
+f = a - 10*B*t/E; u = p - 10*Q*t/E
+x = (-F*(r -u) + B*(c*c - f*f + r*r - u*u)/2)/(B*(c - f) + Q*(r - u))
+z = ( F*(c -f) + Q*(c*c - f*f + r*r - u*u)/2)/(B*(c - f) + Q*(r - u))
+y = 45 + Fh1 + 0.75*E - 3*(x - A/2)*(x - A/2)/E - 3*(z - P/2)*(z - P/2)/E
+xd = x-c; zd = z-r; n = zd/xd; N = n*n + 1; rN = N ^ 0.5
+K = xd + n*zd; L = xd*xd + zd*zd; M = y -Fh2 -45
+
+dd1 = 3*L/(3*K + M*rN); sd1 = dd1*n
+dd2 = 3*L/(3*K - M*rN); sd2 = dd2*n
+
+D1 = (dd1*dd1 +sd1*sd1) ^ 0.5
+D2 = (dd2*dd2 +sd2*sd2) ^ 0.5
+
+d1 = dd1 + c; s1 = sd1 + r; d2 = dd2 + c; s2 = sd2 + r
+
+h1 = 45 + Fh2 + 0.75*D1 - 0.75*(2*xd - dd1)*(2*xd - dd1)/D1 - 0.75*(2*zd - sd1)*(2*zd - sd1)/D1
+h2 = 45 + Fh2 + 0.75*D2 - 0.75*(2*xd - dd2)*(2*xd - dd2)/D2 - 0.75*(2*zd - sd2)*(2*zd - sd2)/D2
+
+G = ((b - f)*(b - f) + (q - u)*(q - u))
+if (b-c)*(b-c)+(q-r)*(q-r) > G then
+	print(t, ":time out")
+break
+elseif h1 < y+10 and h1 > y-10 then
+if D1 > 10000 then
+print(t, ":*")
+else
+print(t, ":(", d1, ",", s1, ")")
+end
+elseif h2 < y+10 and h2 > y-10 then
+if D2 > 10000 then
+print(t, ":*")
+else
+print(t, ":(", d2, ",", s2, ")")
+end
+else
+print(t, ":*")
+end
+sleep(0.2)
+end
+							</pre>
+					</div>
+				</div>
+			</main>
+			<footer>
+				<div id="footer">
+					<div id="footer-nav">
+						<!--Auto Insert-->
+					</div>
+					<span class="Copyright">Copyright 2018-2019 マインクラフト防衛部.</span>
+					<span class="Copyright"><a href="https://google.github.io/material-design-icons/">Google Material Icons.</a></span>
+				</div>
+			</footer>
+		</div>
+		<script src="/assets/lib/jquery-3.2.1.min.js"></script>
+		<script src="/assets/js/main.js"></script>
+		<script src="/assets/lib/src/ace.js"></script>
+		<script>
+		var editor = ace.edit("editor");
+		editor.setTheme("ace/theme/eclipse");
+		editor.set
+		editor.getSession().setMode("ace/mode/lua");
+
+		e
+		</script>
+		<script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
+	</body>
+</html>
