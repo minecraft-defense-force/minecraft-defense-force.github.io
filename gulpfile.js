@@ -1,6 +1,8 @@
 const gulp        = require('gulp');
+const gutil       = require('gulp-util');
 const browserSync = require('browser-sync').create();
 const sass        = require('gulp-sass');
+const stream      = require('stream');
 
 const staticResourcesGlob = [
     "src/**/*.html",
@@ -32,4 +34,27 @@ gulp.task('serve', gulp.series(
     }
 ));
 
-gulp.task('default', gulp.parallel(gulp.task('sass'), gulp.task('copy-statics')));
+function empty_src(filename) {
+    const src = new stream.Readable({objectMode: true});
+    src._read = function () {
+        this.push(new gutil.File({
+            cwd: "",
+            base: "",
+            path: filename,
+            contents: new Buffer.alloc(0)
+        }))
+        this.push(null)
+    }
+    return src
+}
+
+gulp.task('generate-nojekyll', () => empty_src(".nojekyll")
+        .pipe(gulp.dest("dist/")));
+
+gulp.task('build', gulp.parallel(
+    gulp.task('sass'),
+    gulp.task('copy-statics'),
+    gulp.task('generate-nojekyll'),
+));
+
+gulp.task('default', gulp.task('build'));
