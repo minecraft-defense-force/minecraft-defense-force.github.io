@@ -15,6 +15,46 @@ $(window).on('load', function () {
 	}
 
 	$('.loading').delay(1200).fadeOut(300);
+
+	!function webcrow_referer_warn() {
+		if (document.referrer === "") return;
+		var hosts = [
+			"boueibu.webcrow.jp",
+			"boueibu.webcrow.jp:80",
+			"boueibu.webcrow.jp:443",
+		]
+		// noinspection SpellCheckingInspection
+		var isFromWebcrow;
+		if (window.URL) {
+			// noinspection SpellCheckingInspection
+			isFromWebcrow = function() {
+				var url = new URL(document.referrer);
+				for (var i = 0; i < hosts.length; i++) {
+					if (hosts[i] === url.host) return true;
+				}
+				return false;
+			}
+		} else {
+			// noinspection SpellCheckingInspection
+			isFromWebcrow = function() {
+				var a = document.createElement("a");
+				a.href = document.referrer;
+				for (var i = 0; i < hosts.length; i++) {
+					if (hosts[i] === a.host) return true;
+				}
+				return false;
+			}
+		}
+
+		if (isFromWebcrow()) {
+			var referer_warn = "<div class='warning show' id='referer-warn'>" +
+				"<span class='warning_text'>" +
+				"ホームページを引っ越しました。ブックマークの更新などお願いします。" +
+				"</span>" +
+				"</div>"
+			$("#browser").before(referer_warn)
+		}
+	}()
 });
 
 
