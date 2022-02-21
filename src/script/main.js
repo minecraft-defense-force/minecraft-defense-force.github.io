@@ -14,7 +14,7 @@ $(window).on('load', function () {
 		$("#browser").toggleClass("show");
 	}
 
-	$('.loading').delay(1200).fadeOut(300);
+	$('.loading').delay(500).fadeOut(300);
 
 	!function webcrow_referer_warn() {
 		if (document.referrer === "") return;
@@ -55,6 +55,8 @@ $(window).on('load', function () {
 			$("#browser").before(referer_warn)
 		}
 	}()
+
+	$$$$dead_warnings$$$$();
 });
 
 

@@ -3,6 +3,8 @@ const gutil       = require('gulp-util');
 const browserSync = require('browser-sync').create();
 const sass        = require('gulp-sass');
 const stream      = require('stream');
+const fs          = require('fs');
+const replace     = require('gulp-replace');
 
 const staticResourcesGlob = [
     "src/**/*.html",
@@ -19,6 +21,10 @@ gulp.task('sass', () => gulp.src("src/stylesheet/scss/*.scss")
     .pipe(gulp.dest("dist/stylesheet/css"))
     .pipe(browserSync.stream()));
 gulp.task('copy-statics', () => gulp.src(staticResourcesGlob)
+    .pipe(replace("$$$$dead_warnings$$$$();", 
+        fs.readFileSync("src/script/$$$$dead_warnings$$$$.js", "utf-8")
+            // simple minify
+            .replace(/\s+/g, " ")))
     .pipe(gulp.dest("dist/")));
 
 // Static Server + watching scss/html files

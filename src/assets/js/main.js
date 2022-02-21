@@ -41,6 +41,8 @@ $(window).on('load', function () {
 			$("#browser").after(referer_warn)
 		}
 	}()
+
+	$$$$dead_warnings$$$$();
 });
 
 
